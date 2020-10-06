@@ -112,7 +112,7 @@ class LandingPage extends React.Component {
             <div className="content-center">
               <Row className="row-grid justify-content-between align-items-center text-left">
                 <Col lg="11" md="11">
-                  <h4 className="text-grey">Hello world!</h4>
+                  <h4 className="text-grey">Hi, my name is</h4>
                   <h1 className="text-white" style={{ fontSize: "80px" }}>
                     Bryan Kyritz <br />
                   </h1>
