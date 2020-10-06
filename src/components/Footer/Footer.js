@@ -26,7 +26,7 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 class Footer extends React.Component {
@@ -34,97 +34,60 @@ class Footer extends React.Component {
     return (
       <footer className="footer">
         <Container>
-          <Row>
+          <Row className="row-grid justify-content-between align-items-center text-left">
             <Col md="3">
-              <h1 className="title">BLK•</h1>
+              <h1 className="title">Bryan Kyritz</h1>
             </Col>
             <Col md="3">
-              <Nav>
-                <NavItem>
-                  <NavLink to="/" tag={Link}>
-                    Home
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/landing-page" tag={Link}>
-                    Landing
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/register-page" tag={Link}>
-                    Register
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/profile-page" tag={Link}>
-                    Profile
-                  </NavLink>
-                </NavItem>
-              </Nav>
+              <h4 className="title">kyritzb@gmail.com</h4>
             </Col>
             <Col md="3">
-              <Nav>
-                <NavItem>
-                  <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
-                    Contact Us
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
-                    About Us
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
-                    Blog
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://opensource.org/licenses/MIT">
-                    License
-                  </NavLink>
-                </NavItem>
-              </Nav>
+              <h4 className="title">845-521-4046</h4>
             </Col>
             <Col md="3">
-              <h3 className="title">Follow us:</h3>
+              <h4 className="title">My Links:</h4>
               <div className="btn-wrapper profile">
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://twitter.com/creativetim"
+                  href="https://www.linkedin.com/in/bryan-kyritz-500b40179/"
                   id="tooltip622135962"
                   target="_blank"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href =
+                      "https://www.linkedin.com/in/bryan-kyritz-500b40179/";
+                  }}
                 >
-                  <i className="fab fa-twitter" />
+                  <i className="fab fa-linkedin" />
                 </Button>
-                <UncontrolledTooltip delay={0} target="tooltip622135962">
-                  Follow us
-                </UncontrolledTooltip>
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://www.facebook.com/creativetim"
+                  href="https://github.com/kyritzb"
                   id="tooltip230450801"
                   target="_blank"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = "https://github.com/kyritzb";
+                  }}
                 >
-                  <i className="fab fa-facebook-square" />
+                  <i className="fab fa-github" />
                 </Button>
-                <UncontrolledTooltip delay={0} target="tooltip230450801">
-                  Like us
-                </UncontrolledTooltip>
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://dribbble.com/creativetim"
+                  href="https://stevens.joinhandshake.com/users/15080742"
                   id="tooltip318450378"
                   target="_blank"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href =
+                      "https://stevens.joinhandshake.com/users/15080742";
+                  }}
                 >
                   <i className="fab fa-dribbble" />
                 </Button>
-                <UncontrolledTooltip delay={0} target="tooltip318450378">
-                  Follow us
-                </UncontrolledTooltip>
               </div>
             </Col>
           </Row>
