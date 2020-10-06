@@ -1,0 +1,448 @@
+import React from "react";
+// react plugin used to create charts
+import { Line } from "react-chartjs-2";
+// reactstrap components
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  CardLink,
+  ListGroupItem,
+  ListGroup,
+  Container,
+  Row,
+  Col,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
+} from "reactstrap";
+
+import { Fade, Grow } from "@material-ui/core";
+
+// core components
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import Footer from "components/Footer/Footer.js";
+import axios from "axios";
+import moment from "moment";
+import bigChartData from "variables/charts.js";
+
+class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      repos: [],
+      currProjPage: 1,
+      timeRefreshed: "N/A",
+    };
+    this.setProjPage = this.setProjPage.bind(this);
+    this.getRepos = this.getRepos.bind(this);
+  }
+
+  getRepos = async () => {
+    let res = await axios
+      .get("https:" + "//" + "api.github.com" + "/users/kyritzb/repos")
+      .then((res) => {
+        let arr = res.data;
+        console.log(moment(arr[0].updated_at));
+
+        arr.sort((a, b) => {
+          return moment(b.updated_at).diff(a.updated_at);
+        });
+
+        this.setState({ repos: arr });
+        console.log(arr);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  setProjPage = (newPage) => {
+    this.setState({ currProjPage: newPage });
+  };
+
+  componentDidMount() {
+    this.getRepos();
+    this.setState({ timeRefreshed: moment().calendar() });
+    document.body.classList.toggle("landing-page");
+  }
+  componentWillUnmount() {
+    document.body.classList.toggle("landing-page");
+  }
+  render() {
+    return (
+      <>
+        {/*<ExamplesNavbar /> */}
+        <div className="wrapper">
+          <div className="page-header">
+            <img
+              alt="..."
+              className="path"
+              src={require("assets/img/blob.png")}
+            />
+            <img
+              alt="..."
+              className="path2"
+              src={require("assets/img/path2.png")}
+            />
+            <img
+              alt="..."
+              className="shapes triangle"
+              src={require("assets/img/triunghiuri.png")}
+            />
+            <img
+              alt="..."
+              className="shapes wave"
+              src={require("assets/img/waves.png")}
+            />
+            <img
+              alt="..."
+              className="shapes squares"
+              src={require("assets/img/patrat.png")}
+            />
+            <img
+              alt="..."
+              className="shapes circle"
+              src={require("assets/img/cercuri.png")}
+            />
+            <div className="content-center">
+              <Row className="row-grid justify-content-between align-items-center text-left">
+                <Col lg="6" md="6">
+                  <h1 className="text-white">
+                    Bryan Kyritz <br />
+                  </h1>
+                  <h4 className="text-grey">Computer Engineering Student</h4>
+                  <p className="text-white mb-3">
+                    I'm a computer engineer based in Hoboken, NJ specializing in
+                    building (and occasionally designing) exceptional websites,
+                    applications, and everything in between.
+                  </p>
+                  <div className="btn-wrapper mb-3">
+                    <Button color="success">Get In Touch</Button>
+
+                    <Button className="btn-link" color="success">
+                      My CV
+                    </Button>
+                  </div>
+                  <div className="btn-wrapper">
+                    <div className="button-container">
+                      <Button
+                        className="btn-icon btn-simple btn-round btn-neutral"
+                        color="default"
+                        href="https://www.linkedin.com/in/bryan-kyritz-500b40179/"
+                        style={{ marginLeft: "20px" }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href =
+                            "https://www.linkedin.com/in/bryan-kyritz-500b40179/";
+                        }}
+                      >
+                        <i className="fab fa-linkedin" />
+                      </Button>
+                      <Button
+                        className="btn-icon btn-simple btn-round btn-neutral"
+                        color="default"
+                        href="#pablo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href = "https://github.com/kyritzb";
+                        }}
+                      >
+                        <i className="fab fa-github" />
+                      </Button>
+                      <Button
+                        className="btn-icon btn-simple btn-round btn-neutral"
+                        color="default"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <i className="fab fa-github" />
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg="4" md="5"></Col>
+              </Row>
+            </div>
+          </div>
+          <section className="section section-lg">
+            <section className="section">
+              <img
+                alt="..."
+                className="path"
+                src={require("assets/img/path4.png")}
+              />
+              <Container>
+                <Row className="row-grid justify-content-between">
+                  <Col md="6">
+                    <div className="pl-md-5">
+                      <h1>About Me</h1>
+                      <p>
+                        Hello! My name is Bryan Kyritz. I am a junior at
+                        computer engineering at Stevens Institute of Technology,
+                        located in Hoboken, NJ.
+                      </p>
+                      <br />
+                      <p>
+                        I love building things for the web including both
+                        frontend and backend. My ultimate goal is to build
+                        technologies that impact the way we live our lives.
+                      </p>
+                      <br />
+                      <p>
+                        Here are some technologies i've been working with
+                        recently:
+                      </p>
+                      <Row
+                        className="row-grid justify-content-between"
+                        style={{ marginTop: "10%" }}
+                      >
+                        <Col>
+                          <ul>
+                            <li>JavaScript (ES6+)</li>
+                            <br />
+                            <li>Node.js</li>
+                            <br />
+                            <li>React</li>
+                          </ul>
+                        </Col>
+                        <Col>
+                          <ul>
+                            <li>Azure</li>
+                            <br />
+                            <li>AWS</li>
+                            <br />
+                            <li>React Native</li>
+                          </ul>
+                        </Col>
+                      </Row>
+                    </div>
+                  </Col>
+                  <Col lg="4" md="5">
+                    <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/Bryan.JPG")}
+                    />
+                  </Col>
+                </Row>
+              </Container>
+            </section>
+          </section>
+          <section className="section section-lg">
+            <img
+              alt="..."
+              className="path"
+              src={require("assets/img/path4.png")}
+            />
+            <img
+              alt="..."
+              className="path2"
+              src={require("assets/img/path5.png")}
+            />
+            <img
+              alt="..."
+              className="path3"
+              src={require("assets/img/path2.png")}
+            />
+            <Container>
+              <Row className="justify-content-center">
+                <Col lg="12">
+                  <h1 className="text-center">My Main Projects</h1>
+                  <Row className="row-grid justify-content-center">
+                    <Col lg="3">
+                      <div className="info">
+                        <div className="icon icon-primary">
+                          <i className="tim-icons icon-money-coins" />
+                        </div>
+                        <div className="btn-wrapper mb-3">
+                          <p className="info-title d-inline">Secure Meeting</p>
+                          <Button
+                            className="btn-link"
+                            href="www.securemeeting.org"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.location.href =
+                                "https://www.securemeeting.org";
+                            }}
+                            size="sm"
+                            style={{ color: "#f6f9fc" }}
+                          >
+                            <i className="tim-icons icon-minimal-right" />
+                          </Button>
+                        </div>
+                        <hr className="line-primary" />
+                        <p>
+                          Secure Meeting is on a mission to build the safest and
+                          most reliable video chat. This will be done by
+                          building an advanced, autoscaling backend with an army
+                          of SFU's and MCU's that intelligenly switch servers
+                          throughout your call.
+                        </p>
+                      </div>
+                    </Col>
+                    <Col lg="3">
+                      <div className="info">
+                        <div className="icon icon-warning">
+                          <i className="tim-icons icon-chart-pie-36" />
+                        </div>
+                        <div className="btn-wrapper mb-3">
+                          <p className="info-title d-inline">Cympl</p>
+                          <Button
+                            className="btn-link"
+                            href="#pablo"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.location.href = "https://www.cympl.io";
+                            }}
+                            size="sm"
+                            style={{ color: "#f6f9fc" }}
+                          >
+                            <i className="tim-icons icon-minimal-right" />
+                          </Button>
+                        </div>
+                        <hr className="line-warning" />
+                        <p>
+                          Cympl believes that the future of work is from your
+                          phone. Cympl is on a mission to provide the virtual
+                          workspace of the future.
+                        </p>
+                      </div>
+                    </Col>
+                    <Col lg="3">
+                      <div className="info">
+                        <div className="icon icon-success">
+                          <i className="tim-icons icon-single-02" />
+                        </div>
+                        <div className="btn-wrapper mb-3">
+                          <p className="info-title d-inline">Scout</p>
+                          <Button
+                            className="btn-link"
+                            href="#pablo"
+                            onClick={(e) => e.preventDefault()}
+                            size="sm"
+                            style={{ color: "#f6f9fc" }}
+                          >
+                            <i className="tim-icons icon-minimal-right" />
+                          </Button>
+                        </div>
+                        <hr className="line-success" />
+                        <p>
+                          Scout is a multiplayer, mobile game that is a new take
+                          on the neighborhood game, manhunt. Invite your friends
+                          to a lobby and select a boundary to play.
+                        </p>
+                      </div>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+          <section>
+            <Container>
+              <h3>My Recent Repos...</h3>
+              <p>Last updated {this.state.timeRefreshed}</p>{" "}
+              <Row className="justify-content-center">
+                {this.state.repos.map((value, index) => {
+                  if (
+                    index >= this.state.currProjPage * 3 - 3 &&
+                    index < this.state.currProjPage * 3
+                  ) {
+                    return (
+                      <Grow
+                        in={true}
+                        timeout={1000}
+                        style={{ transformOrigin: "0 0 0" }}
+                        {...(true ? { timeout: 1000 * ((index % 3) + 1) } : {})}
+                      >
+                        <Col sm="4">
+                          <Card
+                            style={{ minHeight: "250px", maxHeight: "250px" }}
+                          >
+                            <CardHeader>
+                              <Row>
+                                <Col>
+                                  <a href={value.html_url}>
+                                    <h6>{value.full_name}</h6>
+                                  </a>
+                                </Col>
+                                <Col sm="4">
+                                  <h6>
+                                    {moment(value.updated_at).format(
+                                      "MMM Do YY"
+                                    )}
+                                  </h6>
+                                </Col>
+                              </Row>
+                            </CardHeader>
+                            <CardBody>
+                              <CardText
+                                style={{
+                                  marginTop: "20px",
+                                  textOverflow: "ellipsis",
+                                  wordWrap: "break-word",
+                                  overflow: "hidden",
+                                  maxHeight: "7.2em",
+                                  lineHeight: "1.8em",
+                                }}
+                              >
+                                {value.description
+                                  ? value.description
+                                  : "No description..."}
+                              </CardText>
+                            </CardBody>
+                            <CardFooter style={{ color: "#00f2c3" }}>
+                              {value.language}
+                            </CardFooter>
+                          </Card>
+                        </Col>
+                      </Grow>
+                    );
+                  }
+                })}
+              </Row>
+              <Row className="justify-content-center">
+                <Pagination>
+                  {this.state.repos.map((value, index) => {
+                    if (index % 3 === 0) {
+                      let page = index / 3 + 1;
+                      if (page === this.state.currProjPage) {
+                        return (
+                          <PaginationItem active>
+                            <PaginationLink>{page}</PaginationLink>
+                          </PaginationItem>
+                        );
+                      } else {
+                        return (
+                          <PaginationItem>
+                            <PaginationLink
+                              onClick={() => {
+                                this.setProjPage(page);
+                              }}
+                            >
+                              {page}
+                            </PaginationLink>
+                          </PaginationItem>
+                        );
+                      }
+                    }
+                  })}
+                </Pagination>
+              </Row>
+              {/*<Footer /> */}
+            </Container>
+          </section>
+        </div>
+      </>
+    );
+  }
+}
+
+export default LandingPage;
