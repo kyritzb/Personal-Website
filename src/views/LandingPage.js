@@ -152,6 +152,14 @@ class LandingPage extends React.Component {
                         </Button>
                       </div>
                     </Col>
+                    <Col>
+                      <Row>
+                        <h4>kyritzb@gmail.com</h4>
+                      </Row>
+                      <Row>
+                        <h4>845-521-4046</h4>
+                      </Row>
+                    </Col>
                   </Row>
 
                   <Row className="row-grid justify-content-between align-items-center">
