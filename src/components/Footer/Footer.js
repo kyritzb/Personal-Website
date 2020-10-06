@@ -86,7 +86,7 @@ class Footer extends React.Component {
                       "https://stevens.joinhandshake.com/users/15080742";
                   }}
                 >
-                  <i className="fab fa-dribbble" />
+                  <i className="tim-icons icon-single-02" />
                 </Button>
               </div>
             </Col>

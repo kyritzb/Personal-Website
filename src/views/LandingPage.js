@@ -30,6 +30,9 @@ import axios from "axios";
 import moment from "moment";
 
 import Pdf from "../assets/resume.pdf";
+import SmLogo from "../assets/img/SecureMeetingLogoOutline.svg";
+import Scout from "../assets/img/scout.svg";
+import Cympl from "../assets/img/cympl.svg";
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -77,6 +80,7 @@ class LandingPage extends React.Component {
     return (
       <>
         {/*<ExamplesNavbar /> */}
+
         <div className="wrapper">
           <div className="page-header">
             <img
@@ -142,6 +146,7 @@ class LandingPage extends React.Component {
                           onClick={() => {
                             window.location.href = Pdf;
                           }}
+                          style={{ marginLeft: "40px" }}
                         >
                           My CV
                         </Button>
@@ -188,7 +193,7 @@ class LandingPage extends React.Component {
                                 "https://stevens.joinhandshake.com/users/15080742";
                             }}
                           >
-                            <i className="fab fa-arrow-right" />
+                            <i className="tim-icons icon-single-02" />
                           </Button>
                         </div>
                       </div>
@@ -286,9 +291,15 @@ class LandingPage extends React.Component {
                   <Row className="row-grid justify-content-center">
                     <Col lg="3">
                       <div className="info">
-                        <div className="icon icon-primary">
-                          <i className="tim-icons icon-money-coins" />
-                        </div>
+                        <div className="icon icon-primary"></div>
+                        <img
+                          src={SmLogo}
+                          alt="logo"
+                          style={{
+                            height: "50px",
+                            width: "50px",
+                          }}
+                        />
                         <div className="btn-wrapper mb-3">
                           <p className="info-title d-inline">Secure Meeting</p>
                           <Button
@@ -319,7 +330,14 @@ class LandingPage extends React.Component {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-warning">
-                          <i className="tim-icons icon-chart-pie-36" />
+                          <img
+                            src={Cympl}
+                            alt="logo"
+                            style={{
+                              height: "50px",
+                              width: "50px",
+                            }}
+                          />
                         </div>
                         <div className="btn-wrapper mb-3">
                           <p className="info-title d-inline">Cympl</p>
@@ -348,7 +366,14 @@ class LandingPage extends React.Component {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-success">
-                          <i className="tim-icons icon-single-02" />
+                          <img
+                            src={Scout}
+                            alt="logo"
+                            style={{
+                              height: "50px",
+                              width: "50px",
+                            }}
+                          />
                         </div>
                         <div className="btn-wrapper mb-3">
                           <p className="info-title d-inline">Scout</p>
