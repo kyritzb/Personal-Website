@@ -1,5 +1,11 @@
 import React from "react";
 
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
 // reactstrap components
 import {
   Button,
@@ -21,7 +27,7 @@ import {
   PaginationLink,
 } from "reactstrap";
 
-import { Fade, Grow } from "@material-ui/core";
+import { Fade, Grow, Chip } from "@material-ui/core";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -33,6 +39,7 @@ import Pdf from "../assets/resume.pdf";
 import SmLogo from "../assets/img/SecureMeetingLogoOutline.svg";
 import Scout from "../assets/img/scout.svg";
 import Cympl from "../assets/img/cympl.svg";
+import tcp from "../assets/img/tcp.svg";
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -161,7 +168,6 @@ class LandingPage extends React.Component {
                       </Row>
                     </Col>
                   </Row>
-
                   <Row className="row-grid justify-content-between align-items-center">
                     <Col lg="8">
                       <div className="btn-wrapper">
@@ -293,9 +299,214 @@ class LandingPage extends React.Component {
               src={require("assets/img/path2.png")}
             />
             <Container>
+              <h1 className="text-center">Places I've Worked</h1>
+              <VerticalTimeline>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={{
+                    background: "#1f2251",
+                    color: "#fff",
+                  }}
+                  contentArrowStyle={{
+                    borderRight: "7px solid  #1f2251",
+                  }}
+                  date="August 2019 - present"
+                  iconStyle={{ background: "#1f2251", color: "#fff" }}
+                >
+                  <div
+                    style={{
+                      paddingBottom: "10px",
+                      display: "block",
+                    }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      label="JS"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="CI/CD"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="AWS"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="Azure"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="Apis"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                  </div>
+                  <h3
+                    className="vertical-timeline-element-title"
+                    style={{ color: "#00e9bd" }}
+                  >
+                    Launchpad
+                  </h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    Mentor / Teacher Assistant
+                  </h4>
+                  <ul>
+                    <li>Lead lectures in javascript, react,</li>
+                  </ul>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={{
+                    background: "#1f2251",
+                    color: "#fff",
+                  }}
+                  contentArrowStyle={{
+                    borderRight: "7px solid  #1f2251",
+                  }}
+                  date="January 2019 - August 2019"
+                  iconStyle={{ background: "#1f2251", color: "#fff" }}
+                >
+                  <div
+                    style={{
+                      paddingBottom: "10px",
+                      display: "block",
+                    }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      label="C#"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="JS"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="React"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                    <Chip
+                      variant="outlined"
+                      label="Azure Devops"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                  </div>
+                  <h3
+                    className="vertical-timeline-element-title"
+                    style={{ color: "#00e9bd" }}
+                  >
+                    Northwell Health
+                  </h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    Software Engineering Intern
+                  </h4>
+                  <p>
+                    Creative Direction, User Experience, Visual Design, Project
+                    Management, Team Leading
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={{
+                    background: "#1f2251",
+                    color: "#fff",
+                  }}
+                  contentArrowStyle={{
+                    borderRight: "7px solid  #1f2251",
+                  }}
+                  date="September 2018 - August 2019"
+                  iconStyle={{ background: "#1f2251", color: "#fff" }}
+                >
+                  <div
+                    style={{
+                      paddingBottom: "10px",
+                      display: "block",
+                    }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      label="Node.js"
+                      style={{
+                        marginRight: "10px",
+                        color: "white",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                      }}
+                    />
+                  </div>
+                  <h3
+                    className="vertical-timeline-element-title"
+                    style={{ color: "#00e9bd" }}
+                  >
+                    True Client Pro
+                  </h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    Programmer
+                  </h4>
+                  <p>
+                    Creative Direction, User Experience, Visual Design, Project
+                    Management, Team Leading
+                  </p>
+                </VerticalTimelineElement>
+              </VerticalTimeline>
+            </Container>
+          </section>
+          <section className="section section-lg">
+            <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
-                  <h1 className="text-center">My Main Projects</h1>
+                  <h1 className="text-center">My Main Project</h1>
                   <Row className="row-grid justify-content-center">
                     <Col lg="3">
                       <div className="info">
@@ -534,6 +745,7 @@ class LandingPage extends React.Component {
               </Row>
             </Container>
           </section>
+
           <Footer />
         </div>
       </>

@@ -29,6 +29,7 @@
     "react-router-dom": "5.1.2",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
+    "react-vertical-timeline-component": "^3.0.2",
     "reactstrap": "8.4.1"
   },
   "scripts": {
