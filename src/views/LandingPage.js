@@ -84,6 +84,12 @@ class LandingPage extends React.Component {
   componentDidMount() {
     this.getRepos();
     document.body.classList.toggle("landing-page");
+    console.log("-------------------------------------------");
+    console.log("Didn't expect anything in here did ya?");
+    console.log("Contact info:");
+    console.log("email: kyritzb@gmail.com");
+    console.log("number: 845-521-4046");
+    console.log("-------------------------------------------");
   }
   componentWillUnmount() {
     document.body.classList.toggle("landing-page");
@@ -91,8 +97,6 @@ class LandingPage extends React.Component {
   render() {
     return (
       <>
-        {/*<ExamplesNavbar /> */}
-
         <div className="wrapper">
           <div className="page-header">
             <img
@@ -236,6 +240,7 @@ class LandingPage extends React.Component {
                 className="path"
                 src={require("assets/img/path4.png")}
               />
+
               <Container>
                 <Row className="row-grid justify-content-between">
                   <Col md="6">
@@ -296,11 +301,6 @@ class LandingPage extends React.Component {
           <section className="section section-lg">
             <img
               alt="..."
-              className="path"
-              src={require("assets/img/path4.png")}
-            />
-            <img
-              alt="..."
               className="path2"
               src={require("assets/img/path5.png")}
             />
@@ -308,6 +308,11 @@ class LandingPage extends React.Component {
               alt="..."
               className="path3"
               src={require("assets/img/path2.png")}
+            />
+            <img
+              alt="..."
+              className="path"
+              src={require("assets/img/path4.png")}
             />
             <Container>
               <h1 className="text-center">Places I've Worked</h1>
@@ -550,6 +555,18 @@ class LandingPage extends React.Component {
             </Container>
           </section>
           <section className="section section-lg">
+            <img
+              alt="..."
+              className="path"
+              src={require("assets/img/path4.png")}
+            />
+
+            <img
+              alt="..."
+              className="shapes circle"
+              src={require("assets/img/cercuri.png")}
+            />
+
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
@@ -668,10 +685,21 @@ class LandingPage extends React.Component {
               </Row>
             </Container>
           </section>
-          <section>
+          <section className="section section-lg">
+            <img
+              alt="..."
+              className="path"
+              src={require("assets/img/path4.png")}
+            />
+            <img
+              alt="..."
+              className="shapes triangle"
+              src={require("assets/img/triunghiuri.png")}
+            />
+
             <Container>
               <h3>My Recent Repos:</h3>
-              <p>Last updated {this.state.timeRefreshed}</p>
+              <p>Last updated: {this.state.timeRefreshed}</p>
               <Row className="justify-content-center">
                 {this.state.repos.map((value, index) => {
                   if (
@@ -759,10 +787,14 @@ class LandingPage extends React.Component {
                   })}
                 </Pagination>
               </Row>
-              {/*<Footer /> */}
             </Container>
           </section>
           <section className="section section-lg">
+            <img
+              alt="..."
+              className="shapes wave"
+              src={require("assets/img/waves.png")}
+            />
             <Container>
               <Row className="justify-content-center">
                 <Col lg="6">
@@ -793,7 +825,6 @@ class LandingPage extends React.Component {
               </Row>
             </Container>
           </section>
-
           <Footer />
         </div>
       </>
