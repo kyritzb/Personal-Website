@@ -128,8 +128,14 @@ class LandingPage extends React.Component {
             <div className="content-center">
               <Row className="row-grid justify-content-between align-items-center text-left">
                 <Col lg="11" md="11">
-                  <h4 className="text-grey">Hi, my name is</h4>
-                  <h1 className="text-white" style={{ fontSize: "80px" }}>
+                  <h4>Hi, my name is</h4>
+                  <h1
+                    style={{
+                      fontSize: "80px",
+                      color: "white",
+                      marginTop: "0px",
+                    }}
+                  >
                     Bryan Kyritz <br />
                   </h1>
                   <h4 className="text-grey" style={{ fontSize: "30px" }}>
@@ -581,9 +587,9 @@ class LandingPage extends React.Component {
                         <p>
                           Secure Meeting is on a mission to build the safest and
                           most reliable video chat. This will be done by
-                          building an advanced, autoscaling backend with an army
-                          of SFU's and MCU's that intelligenly switch servers
-                          throughout your call.
+                          building an end to end encrypted, advanced,
+                          autoscaling backend with an army of smart SFU's and
+                          MCU's.
                         </p>
                       </div>
                     </Col>
@@ -618,8 +624,9 @@ class LandingPage extends React.Component {
                         <p className="info-title d-inline">Co-founder & CTO</p>
                         <p>
                           Cympl believes that the future of work is from your
-                          phone. Cympl is on a mission to provide the virtual
-                          workspace of the future.
+                          computer. No longer will there be the need for the
+                          mundane travling to and from the office everyday.
+                          Cympl is a desktop app that provides this ability.
                         </p>
                       </div>
                     </Col>
@@ -663,7 +670,7 @@ class LandingPage extends React.Component {
           </section>
           <section>
             <Container>
-              <h3>My Recent Repos...</h3>
+              <h3>My Recent Repos:</h3>
               <p>Last updated {this.state.timeRefreshed}</p>
               <Row className="justify-content-center">
                 {this.state.repos.map((value, index) => {
