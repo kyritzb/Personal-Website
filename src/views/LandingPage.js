@@ -39,7 +39,12 @@ import Pdf from "../assets/resume.pdf";
 import SmLogo from "../assets/img/SecureMeetingLogoOutline.svg";
 import Scout from "../assets/img/scout.svg";
 import Cympl from "../assets/img/cympl.svg";
-import tcp from "../assets/img/tcp.svg";
+
+import { ReactComponent as TCP } from "../assets/img/tcp.svg";
+import { ReactComponent as NW } from "../assets/img/nw.svg";
+import { ReactComponent as LP } from "../assets/img/lp.svg";
+
+import AcUnitIcon from "@material-ui/icons/AcUnit";
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -310,8 +315,9 @@ class LandingPage extends React.Component {
                   contentArrowStyle={{
                     borderRight: "7px solid  #1f2251",
                   }}
-                  date="August 2019 - present"
+                  date="June 2019 - present"
                   iconStyle={{ background: "#1f2251", color: "#fff" }}
+                  icon={<LP />}
                 >
                   <div
                     style={{
@@ -379,9 +385,18 @@ class LandingPage extends React.Component {
                   <h4 className="vertical-timeline-element-subtitle">
                     Mentor / Teacher Assistant
                   </h4>
-                  <ul>
-                    <li>Lead lectures in javascript, react,</li>
-                  </ul>
+                  <div style={{ marginTop: "10px" }}>
+                    <ul>
+                      <li>
+                        Guide students in developing software architecture for
+                        their technology startup
+                      </li>
+                      <li>
+                        Teach lessons in react, javascript, node,js, websockets,
+                        databases, etc.
+                      </li>
+                    </ul>
+                  </div>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
@@ -394,6 +409,7 @@ class LandingPage extends React.Component {
                   }}
                   date="January 2019 - August 2019"
                   iconStyle={{ background: "#1f2251", color: "#fff" }}
+                  icon={<NW />}
                 >
                   <div
                     style={{
@@ -451,10 +467,22 @@ class LandingPage extends React.Component {
                   <h4 className="vertical-timeline-element-subtitle">
                     Software Engineering Intern
                   </h4>
-                  <p>
-                    Creative Direction, User Experience, Visual Design, Project
-                    Management, Team Leading
-                  </p>
+
+                  <div style={{ marginTop: "10px" }}>
+                    <ul>
+                      <li>
+                        Led the development of new user onboarding process to
+                        abide by HIPPA laws
+                      </li>
+                      <li>
+                        Led the development of an announcement feature to notify
+                        users with update logs
+                      </li>
+                      <li>
+                        Participated on an agile team working towards OKRs
+                      </li>
+                    </ul>
+                  </div>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
@@ -467,6 +495,7 @@ class LandingPage extends React.Component {
                   }}
                   date="September 2018 - August 2019"
                   iconStyle={{ background: "#1f2251", color: "#fff" }}
+                  icon={<TCP />}
                 >
                   <div
                     style={{
@@ -494,10 +523,22 @@ class LandingPage extends React.Component {
                   <h4 className="vertical-timeline-element-subtitle">
                     Programmer
                   </h4>
-                  <p>
-                    Creative Direction, User Experience, Visual Design, Project
-                    Management, Team Leading
-                  </p>
+                  <div style={{ marginTop: "10px" }}>
+                    <ul>
+                      <li>
+                        Developed and managed databases by coding webscrapers to
+                        quickly collect, organize, and store data
+                      </li>
+                      <li>
+                        Tested the application and recorded bugs in an organized
+                        manner
+                      </li>
+                      <li>
+                        Trained an intern to update webscrapers, organize data,
+                        and manage the database
+                      </li>
+                    </ul>
+                  </div>
                 </VerticalTimelineElement>
               </VerticalTimeline>
             </Container>
@@ -506,7 +547,7 @@ class LandingPage extends React.Component {
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
-                  <h1 className="text-center">My Main Project</h1>
+                  <h1 className="text-center">My Main Projects</h1>
                   <Row className="row-grid justify-content-center">
                     <Col lg="3">
                       <div className="info">
