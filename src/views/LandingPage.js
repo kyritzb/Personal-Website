@@ -86,6 +86,7 @@ class LandingPage extends React.Component {
     document.body.classList.toggle("landing-page");
     console.log("-------------------------------------------");
     console.log("Didn't expect anything in here did ya?");
+    console.log("I think thats a good sign to hire me :)");
     console.log("Contact info:");
     console.log("email: kyritzb@gmail.com");
     console.log("number: 845-521-4046");
