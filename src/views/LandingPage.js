@@ -167,7 +167,7 @@ class LandingPage extends React.Component {
                           }}
                           style={{ marginLeft: "40px" }}
                         >
-                          My Resume
+                          My Résumé
                         </Button>
                       </div>
                     </Col>
