@@ -27,10 +27,8 @@ import {
   PaginationLink,
 } from "reactstrap";
 
-import { Fade, Grow, Chip } from "@material-ui/core";
+import { Grow, Chip } from "@material-ui/core";
 
-// core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import axios from "axios";
 import moment from "moment";
@@ -43,8 +41,6 @@ import Cympl from "../assets/img/cympl.svg";
 import { ReactComponent as TCP } from "../assets/img/tcp.svg";
 import { ReactComponent as NW } from "../assets/img/nw.svg";
 import { ReactComponent as LP } from "../assets/img/lp.svg";
-
-import AcUnitIcon from "@material-ui/icons/AcUnit";
 
 class LandingPage extends React.Component {
   constructor(props) {
