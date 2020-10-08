@@ -27,7 +27,7 @@ import {
   PaginationLink,
 } from "reactstrap";
 
-import { Grow, Chip } from "@material-ui/core";
+import { Fade, Grow, Chip } from "@material-ui/core";
 
 import Footer from "components/Footer/Footer.js";
 import axios from "axios";
@@ -127,107 +127,111 @@ class LandingPage extends React.Component {
               src={require("assets/img/cercuri.png")}
             />
             <div className="content-center">
-              <Row className="row-grid justify-content-between align-items-center text-left">
-                <Col lg="11" md="11">
-                  <h4>Hi, my name is</h4>
-                  <h1
-                    style={{
-                      fontSize: "80px",
-                      color: "white",
-                      marginTop: "0px",
-                    }}
-                  >
-                    Bryan Kyritz <br />
-                  </h1>
-                  <h4 className="text-grey" style={{ fontSize: "30px" }}>
-                    Computer Engineering Student
-                  </h4>
-                  <p className="text-white mb-3" style={{ fontSize: "20px" }}>
-                    I'm a computer engineer based in Hoboken, NJ specializing in
-                    building (and occasionally designing) exceptional websites,
-                    applications, and everything in between.
-                  </p>
-                  <Row>
-                    <Col>
-                      <div className="btn-wrapper mb-3">
-                        <Button
-                          color="success"
-                          onClick={() => {
-                            window.location.href = "mailto:kyritzb@gmail.com";
-                          }}
-                        >
-                          Get In Touch
-                        </Button>
+              <Fade in={true} timeout={750}>
+                <Row className="row-grid justify-content-between align-items-center text-left">
+                  <Col lg="11" md="11">
+                    <h4>Hi, my name is</h4>
 
-                        <Button
-                          className="btn-link"
-                          color="success"
-                          onClick={() => {
-                            window.location.href = Pdf;
-                          }}
-                          style={{ marginLeft: "40px" }}
-                        >
-                          My Résumé
-                        </Button>
-                      </div>
-                    </Col>
-                    <Col>
-                      <Row>
-                        <h4>kyritzb@gmail.com</h4>
-                      </Row>
-                      <Row>
-                        <h4>845-521-4046</h4>
-                      </Row>
-                    </Col>
-                  </Row>
-                  <Row className="row-grid justify-content-between align-items-center">
-                    <Col lg="8">
-                      <div className="btn-wrapper">
-                        <div className="button-container">
+                    <h1
+                      style={{
+                        fontSize: "80px",
+                        color: "white",
+                        marginTop: "0px",
+                      }}
+                    >
+                      Bryan Kyritz <br />
+                    </h1>
+
+                    <h4 className="text-grey" style={{ fontSize: "30px" }}>
+                      Computer Engineering Student
+                    </h4>
+                    <p className="text-white mb-3" style={{ fontSize: "20px" }}>
+                      I'm a computer engineer based in Hoboken, NJ specializing
+                      in building (and occasionally designing) exceptional
+                      websites, applications, and everything in between.
+                    </p>
+                    <Row>
+                      <Col>
+                        <div className="btn-wrapper mb-3">
                           <Button
-                            className="btn-icon btn-simple btn-round btn-neutral"
-                            color="default"
-                            href="https://www.linkedin.com/in/bryan-kyritz-500b40179/"
-                            style={{ marginLeft: "20px" }}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              window.location.href =
-                                "https://www.linkedin.com/in/bryan-kyritz-500b40179/";
+                            color="success"
+                            onClick={() => {
+                              window.location.href = "mailto:kyritzb@gmail.com";
                             }}
                           >
-                            <i className="fab fa-linkedin" />
+                            Get In Touch
                           </Button>
+
                           <Button
-                            className="btn-icon btn-simple btn-round btn-neutral"
-                            color="default"
-                            href="https://github.com/kyritzb"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              window.location.href =
-                                "https://github.com/kyritzb";
+                            className="btn-link"
+                            color="success"
+                            onClick={() => {
+                              window.location.href = Pdf;
                             }}
+                            style={{ marginLeft: "40px" }}
                           >
-                            <i className="fab fa-github" />
-                          </Button>
-                          <Button
-                            className="btn-icon btn-simple btn-round btn-neutral"
-                            color="default"
-                            href="https://stevens.joinhandshake.com/users/15080742"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              window.location.href =
-                                "https://stevens.joinhandshake.com/users/15080742";
-                            }}
-                          >
-                            <i className="tim-icons icon-single-02" />
+                            My Résumé
                           </Button>
                         </div>
-                      </div>
-                    </Col>
-                  </Row>
-                </Col>
-                <Col lg="4" md="5"></Col>
-              </Row>
+                      </Col>
+                      <Col>
+                        <Row>
+                          <h4>kyritzb@gmail.com</h4>
+                        </Row>
+                        <Row>
+                          <h4>845-521-4046</h4>
+                        </Row>
+                      </Col>
+                    </Row>
+                    <Row className="row-grid justify-content-between align-items-center">
+                      <Col lg="8">
+                        <div className="btn-wrapper">
+                          <div className="button-container">
+                            <Button
+                              className="btn-icon btn-simple btn-round btn-neutral"
+                              color="default"
+                              href="https://www.linkedin.com/in/bryan-kyritz-500b40179/"
+                              style={{ marginLeft: "20px" }}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href =
+                                  "https://www.linkedin.com/in/bryan-kyritz-500b40179/";
+                              }}
+                            >
+                              <i className="fab fa-linkedin" />
+                            </Button>
+                            <Button
+                              className="btn-icon btn-simple btn-round btn-neutral"
+                              color="default"
+                              href="https://github.com/kyritzb"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href =
+                                  "https://github.com/kyritzb";
+                              }}
+                            >
+                              <i className="fab fa-github" />
+                            </Button>
+                            <Button
+                              className="btn-icon btn-simple btn-round btn-neutral"
+                              color="default"
+                              href="https://stevens.joinhandshake.com/users/15080742"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href =
+                                  "https://stevens.joinhandshake.com/users/15080742";
+                              }}
+                            >
+                              <i className="tim-icons icon-single-02" />
+                            </Button>
+                          </div>
+                        </div>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col lg="4" md="5"></Col>
+                </Row>
+              </Fade>
             </div>
           </div>
           <section className="section section-lg">
