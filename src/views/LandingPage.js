@@ -791,6 +791,7 @@ class LandingPage extends React.Component {
               alt="..."
               className="shapes wave"
               src={require("assets/img/waves.png")}
+              style={{ zIndex: "-1" }}
             />
             <Container>
               <Row className="justify-content-center">
