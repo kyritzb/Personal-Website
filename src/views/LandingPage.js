@@ -100,31 +100,37 @@ class LandingPage extends React.Component {
               alt="..."
               className="path"
               src={require("assets/img/blob.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="path2"
               src={require("assets/img/path2.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="shapes triangle"
               src={require("assets/img/triunghiuri.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="shapes wave"
               src={require("assets/img/waves.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="shapes squares"
               src={require("assets/img/patrat.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="shapes circle"
               src={require("assets/img/cercuri.png")}
+               style={{ zIndex: "-1" }}
             />
             <div className="content-center">
               <Fade in={true} timeout={750}>
@@ -240,6 +246,7 @@ class LandingPage extends React.Component {
                 alt="..."
                 className="path"
                 src={require("assets/img/path4.png")}
+                 style={{ zIndex: "-1" }}
               />
 
               <Container>
@@ -304,16 +311,19 @@ class LandingPage extends React.Component {
               alt="..."
               className="path2"
               src={require("assets/img/path5.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="path3"
               src={require("assets/img/path2.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="path"
               src={require("assets/img/path4.png")}
+               style={{ zIndex: "-1" }}
             />
             <Container>
               <h1 className="text-center">Places I've Worked</h1>
@@ -558,16 +568,10 @@ class LandingPage extends React.Component {
           <section className="section section-lg">
             <img
               alt="..."
-              className="path"
-              src={require("assets/img/path4.png")}
-            />
-
-            <img
-              alt="..."
               className="shapes circle"
               src={require("assets/img/cercuri.png")}
+               style={{ zIndex: "-1" }}
             />
-
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
@@ -609,6 +613,18 @@ class LandingPage extends React.Component {
                           autoscaling backend with an army of smart SFU's and
                           MCU's.
                         </p>
+                        <Button
+                          className="btn-link"
+                          color="success"
+                          onClick={() => {
+                            window.location.href = "https://www.stevens.edu/news/just-time-crisis-stevens-team-unveils-secure-new-videoconferencing-tool";
+                          }}
+                          style={{
+                            textAlign: "left"
+                          }}
+                        >
+                          View an article
+                        </Button>
                       </div>
                     </Col>
                     <Col lg="3">
@@ -691,11 +707,13 @@ class LandingPage extends React.Component {
               alt="..."
               className="path"
               src={require("assets/img/path4.png")}
+               style={{ zIndex: "-1" }}
             />
             <img
               alt="..."
               className="shapes triangle"
               src={require("assets/img/triunghiuri.png")}
+               style={{ zIndex: "-1" }}
             />
 
             <Container>
