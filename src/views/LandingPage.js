@@ -405,17 +405,15 @@ class LandingPage extends React.Component {
                     Launchpad
                   </h3>
                   <h4 className="vertical-timeline-element-subtitle">
-                    Mentor / Teacher Assistant
+                    Mentor / Teaching Assistant
                   </h4>
                   <div style={{ marginTop: "10px" }}>
                     <ul>
                       <li>
-                        Guide students in developing software architecture for
-                        their technology startup
+                        Lead students in the development of software architecture for their technology startups
                       </li>
                       <li>
-                        Teach lessons in react, javascript, node,js, websockets,
-                        databases, etc.
+                        Organize and orchestrate interactive lessons in coding and software design principles
                       </li>
                     </ul>
                   </div>
@@ -493,15 +491,13 @@ class LandingPage extends React.Component {
                   <div style={{ marginTop: "10px" }}>
                     <ul>
                       <li>
-                        Led the development of new user onboarding process to
-                        abide by HIPPA laws
+                        Spearheaded the creation of a scalable user onboarding process which enabled thousands of accounts to be created
                       </li>
                       <li>
-                        Led the development of an announcement feature to notify
-                        users with update logs
+                        Created an announcement system to enable two way communication between users and developers
                       </li>
                       <li>
-                        Participated on an agile team working towards OKRs
+                        Participated on an agile development team, communicating closely with various internal teams
                       </li>
                     </ul>
                   </div>
@@ -548,16 +544,13 @@ class LandingPage extends React.Component {
                   <div style={{ marginTop: "10px" }}>
                     <ul>
                       <li>
-                        Developed and managed databases by coding webscrapers to
-                        quickly collect, organize, and store data
+                        Developed and managed databases by building web scrapers to rapidly collect, organize, and store data
                       </li>
                       <li>
-                        Tested the application and recorded bugs in an organized
-                        manner
+                        Tested the application and documented bugs to developers in an organized manner
                       </li>
                       <li>
-                        Trained an intern to update webscrapers, organize data,
-                        and manage the database
+                        Trained an intern to contribute to existing code and manage the databases
                       </li>
                     </ul>
                   </div>
