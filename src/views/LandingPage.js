@@ -652,7 +652,7 @@ class LandingPage extends React.Component {
                         <p>
                           Cympl believes that the future of work is from your
                           computer. No longer will there be the need for the
-                          mundane travling to and from the office everyday.
+                          mundane traveling to and from the office everyday.
                           Cympl is a desktop app that provides this ability.
                         </p>
                       </div>
