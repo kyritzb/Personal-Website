@@ -182,7 +182,7 @@ class LandingPage extends React.Component {
                       </Col>
                       <Col>
                         <Row>
-                          <h4>kyritzb@gmail.com</h4>
+                          <h4>bkyritz@stevens.edu</h4>
                         </Row>
                         <Row>
                           <h4>845-521-4046</h4>
